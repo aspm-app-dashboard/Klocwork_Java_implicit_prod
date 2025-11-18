@@ -39,6 +39,7 @@ jobs:
         id: klocwork-step
         uses: cloudbees-io-gha/perforce-klocwork-sast-publish@v1
         with:
+          cloudbees-url: ${{ vars.CLOUDBEES_QA_API_URL }}
           url: ${{ vars.KLOCWORK_URL }}
           token: ${{ secrets.KLOCWORK_APP_TOKEN }}
           license-host: ${{ vars.KLOCWORK_LICENSE }}
